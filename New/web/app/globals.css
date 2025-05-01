@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #181c2b 0%, #23244a 50%, #2e2257 100%) fixed;
+}
+
+@keyframes slowPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.15); }
+}
+@keyframes slowPulse2 {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50%      { transform: scale(1.1) translateY(-10px); }
+}
+@keyframes slowDrift {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-4%); }
+}
+@keyframes blob {
+  0%,100%{transform:scale(1)}
+  50%    {transform:scale(1.15)}
+}
+@keyframes blob2{
+  0%,100%{transform:scale(1) translateY(0)}
+  50%    {transform:scale(1.1) translateY(-15px)}
+}
+@keyframes drift{
+  0%  {transform:translateX(0)}
+  100%{transform:translateX(-4%)}
+}
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  10% { transform: translateY(-4px); }
+  20% { transform: translateY(4px); }
+  30% { transform: translateY(-8px); }
+  40% { transform: translateY(8px); }
+  50% { transform: translateY(-12px); }
+  60% { transform: translateY(8px); }
+  70% { transform: translateY(-8px); }
+  80% { transform: translateY(4px); }
+  90% { transform: translateY(-4px); }
+}
+@keyframes fade-in { from{opacity:0; transform:scale(.95)} to{opacity:1} }
+.animate-fade-in { animation: fade-in .15s ease-out; }
+.animate-slowPulse  { animation: slowPulse 12s ease-in-out infinite; }
+.animate-slowPulse2 { animation: slowPulse2 18s ease-in-out infinite; }
+.animate-slowDrift  { animation: slowDrift 60s linear infinite; }
+.animate-blob  {animation:blob 14s ease-in-out infinite;}
+.animate-blob2 {animation:blob2 18s ease-in-out infinite;}
+.animate-drift {animation:drift 80s linear infinite;}
+.animate-wave { animation: wave 2s ease-in-out infinite; }
+.zen-title-wave {
+  animation: wave 2s ease-in-out infinite !important;
+}
+
+.btn-primary      { @apply px-4 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-medium shadow-lg transition; }
+.btn-primary\/outline { @apply px-4 py-2 rounded-lg border border-indigo-500 text-indigo-300 hover:bg-indigo-500/10 transition; }

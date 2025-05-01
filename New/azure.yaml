@@ -1,0 +1,14 @@
+# azure.yaml
+# Azure Developer CLI infra definitions (stub)
+services:
+  web:
+    project: ./web
+    language: js
+    host: staticwebapp
+  api:
+    project: ./api
+    language: python
+    host: functionapp
+  cosmos:
+    type: database
+    kind: cosmosdb

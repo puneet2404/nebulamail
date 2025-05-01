@@ -1,0 +1,4 @@
+azure-functions
+requests
+azure-identity
+openai==1.*

@@ -1,0 +1,15 @@
+{
+  "name": "nebula-mail",
+  "private": true,
+  "workspaces": ["web", "api"],
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "func": "pnpm --filter api func host start",
+    "lint": "eslint . --ext .ts,.tsx,.py",
+    "rescue:web": "pnpm install && pnpm ls --filter web --depth 0 | grep next && pnpm --filter web dev"
+  },
+  "devDependencies": {
+    "@azure/functions": "^4",
+    "eslint": "^8"
+  }
+}
